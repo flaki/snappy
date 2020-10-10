@@ -2,7 +2,6 @@ let activeTab;
 
 async function updateActiveTab(tabs) {
   activeTab = await browser.tabs.query({active: true, currentWindow: true});
-  console.log(activeTab&&activeTab[0].id);
 
   await findVideo();
 }
@@ -48,16 +47,13 @@ async function receiveMessages(message) {
   let { snapshot } = message;
   if (!snapshot) return;
 
-  // TODO: copy to clipboard
-  console.log(snapshot.blob);
-
+  // Copy video snapshot to the clipboard
   let imagebuf = await snapshot.blob.arrayBuffer();
-  await browser.clipboard.setImageData(imagebuf, 'png')
+  await browser.clipboard.setImageData(imagebuf, 'png');
 
 
   // Open snapshot in new tab
   let imagedu = await blobDataUrl(snapshot.blob);
-  //console.log(imagedu);
 
   let newtab = await browser.tabs.create({
     url: '/snapshot.html'

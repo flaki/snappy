@@ -3,7 +3,7 @@
   "description": "Take video snapshots quickly and easily!",
   "manifest_version": 2,
   "name": "Snappy",
-  "version": "1.0",
+  "version": "0.1",
 
   "permissions": [
     "clipboardWrite"
