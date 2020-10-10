@@ -1,0 +1,29 @@
+{
+
+  "description": "Take video snapshots quickly and easily!",
+  "manifest_version": 2,
+  "name": "Snappy",
+  "version": "1.0",
+
+  "permissions": [
+    "clipboardWrite"
+  ],
+
+  "background": {
+    "scripts": ["snap.js"]
+  },
+ 
+  "browser_action": {
+    "default_icon": {
+      "16": "img/snap16.png",
+      "32": "img/snap32.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["cs.js"]
+    }
+  ]
+}
