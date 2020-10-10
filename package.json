@@ -1,0 +1,32 @@
+{
+  "name": "snappy",
+  "version": "0.1.0",
+  "description": "WebExtension for taking video snapshots",
+  "main": "",
+  "scripts": {
+    "build": "npx web-ext build --overwrite-dest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaki/snappy.git"
+  },
+  "keywords": [
+    "extension",
+    "browser",
+    "extension",
+    "webextension",
+    "video",
+    "screenshot",
+    "snapshot",
+    "framegrab"
+  ],
+  "author": "Flaki <git@flaki.hu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flaki/snappy/issues"
+  },
+  "homepage": "https://github.com/flaki/snappy#readme",
+  "devDependencies": {
+    "web-ext": "^5.2.0"
+  }
+}
